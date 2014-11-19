@@ -4,7 +4,7 @@ browser = Selenium::WebDriver.for :firefox
 browser.get 'http://demo.redmine.org'
 
 #Account creation
-attempt = '5578'
+attempt = '5573'
 login = 'test_login' + attempt
 email = login + '@mail.test'
 
@@ -80,4 +80,4 @@ fail 'Seems that this issue is not yours' unless browser.find_element(:xpath => 
 
 #fail 'Couldn\'t find success message' unless browser.find_element(:id => 'flash_notice').text == 'Account was successfully updated.'
 
-#browser.close
+browser.close
